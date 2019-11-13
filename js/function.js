@@ -81,4 +81,20 @@ $(function(){
       scrollTop : 0
     },1000,'easeInOutCubic');
   });
+
+  //미디어 쿼리 로직
+  var timer = null;
+
+  function resizing(){
+    var winWidth = $('html,body').width();
+
+    if(winWidth<768){
+      alert('해당 이벤트 페이지는 PC(1920px)와 태블릿(768px)에 최적화되었습니다.');
+    }
+  }
+
+  $(window).one('resize', function(){
+    clearTimeout(timer);
+    timer = setTimeout(resizing,400);
+  });
 });
