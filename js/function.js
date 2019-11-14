@@ -75,7 +75,7 @@ $(function(){
       transform : 'rotate(360deg)'
     });
 
-    $gnb.fadeToggle();
+    $gnb.slideToggle();
   });
 
   //language
